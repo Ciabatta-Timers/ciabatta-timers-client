@@ -1,6 +1,6 @@
 import openSocket from 'socket.io-client'
 
-const socket = openSocket('/')
+const socket = openSocket(process.env.REACT_APP_HOST || '/')
 
 export function startTimer (cb) {
   socket.on('timer', cb)
