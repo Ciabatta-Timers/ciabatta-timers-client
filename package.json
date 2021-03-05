@@ -39,5 +39,13 @@
   },
   "devDependencies": {
     "standard": "^16.0.3"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "expect",
+      "it",
+      "jest"
+    ]
   }
 }
