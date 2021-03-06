@@ -15,13 +15,13 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-function App() {
+function App () {
   const { appContainer } = useStyles()
 
   const [currentTime, setCurrentTime] = useState(0)
   const [timerId, setTimerId] = useState()
 
-  const onTimerTick = ({timer, timerId}) => {
+  const onTimerTick = ({ timer, timerId }) => {
     setCurrentTime(timer)
     setTimerId(timerId)
   }
@@ -44,31 +44,33 @@ function App() {
         <Grid
           className={appContainer}
           container
-          direction="column"
-          justify="center"
-          alignItems="center"
-          wrap="nowrap"
+          direction='column'
+          justify='center'
+          alignItems='center'
+          wrap='nowrap'
           spacing={2}
         >
           <Grid item>
-            <Typography variant="h2">{timerId}</Typography>
+            <Typography variant='h2'>{timerId}</Typography>
           </Grid>
           <Grid item>
-            <Timer time={currentTime}/>
+            <Timer time={currentTime} />
           </Grid>
           <Grid item>
-            {timerId ? (
-              <Button variant="contained" color="primary" onClick={onLeaveTimer}>Leave Timer</Button>
-            ) : (
-              <JoinTimer onSubmit={onJoinTimer}/>
-            )}
+            {timerId
+              ? (
+                <Button variant='contained' color='primary' onClick={onLeaveTimer}>Leave Timer</Button>
+                )
+              : (
+                <JoinTimer onSubmit={onJoinTimer} />
+                )}
           </Grid>
-          <Grid container item justify="center" spacing={2} >
+          <Grid container item justify='center' spacing={2}>
             <Grid item>
-              <Button variant="contained" color="primary" onClick={onStartTimer}>Start Timer</Button>
+              <Button variant='contained' color='primary' onClick={onStartTimer}>Start Timer</Button>
             </Grid>
             <Grid item>
-              <Button variant="outlined" color="primary" onClick={onStopTimer}>Stop Timer</Button>
+              <Button variant='outlined' color='primary' onClick={onStopTimer}>Stop Timer</Button>
             </Grid>
           </Grid>
         </Grid>

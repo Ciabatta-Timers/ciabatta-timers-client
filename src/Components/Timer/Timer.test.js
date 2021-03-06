@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import Timer from './index';
+import { render, screen } from '@testing-library/react'
+import Timer from './index'
 
 describe('<Timer />', () => {
   it('Should handle time === 0', () => {

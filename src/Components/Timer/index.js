@@ -1,20 +1,20 @@
 import PropTypes from 'prop-types'
-import Typography from "@material-ui/core/Typography"
+import Typography from '@material-ui/core/Typography'
 
-const Timer = ({time}) => {
+const Timer = ({ time }) => {
   const formatTime = (time) => {
     const timeAsDate = new Date(time)
     if (isNaN(timeAsDate.valueOf())) {
       return NaN
     }
 
-    var minutes = timeAsDate.getMinutes()
+    let minutes = timeAsDate.getMinutes()
     minutes = minutes < 10 ? `0${minutes}` : minutes
 
-    var seconds = timeAsDate.getSeconds()
+    let seconds = timeAsDate.getSeconds()
     seconds = seconds < 10 ? `0${seconds}` : seconds
 
-    var milliseconds = timeAsDate.getMilliseconds()
+    let milliseconds = timeAsDate.getMilliseconds()
     if (milliseconds < 10) {
       milliseconds = `00${milliseconds}`
     } else if (milliseconds < 100) {
@@ -25,7 +25,7 @@ const Timer = ({time}) => {
   }
 
   return (
-    <Typography type="h3">{formatTime(time)}</Typography>
+    <Typography type='h3'>{formatTime(time)}</Typography>
   )
 }
 

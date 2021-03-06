@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import JoinTimer from './index';
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import JoinTimer from './index'
 
 describe('<JoinTimer />', () => {
   it('Renders an input field to type the timer id in', () => {
@@ -18,7 +18,7 @@ describe('<JoinTimer />', () => {
   it('Renders the submit button as disabled unless the input field is filled out', () => {
     render(<JoinTimer onSubmit={jest.fn()} />)
 
-    const button = screen.getByRole('button', {name: /join/i})
+    const button = screen.getByRole('button', { name: /join/i })
     expect(button).toBeInTheDocument()
     expect(button).toBeDisabled()
 

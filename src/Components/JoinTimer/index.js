@@ -27,10 +27,10 @@ const JoinTimer = ({ onSubmit, maxIdLength }) => {
     <form onSubmit={handleSubmit}>
       <Grid container>
         <Grid item>
-          <TextField value={timerId} label="Join Timer" placeholder="abc123" onChange={onChangeTimerId}/>
+          <TextField value={timerId} label='Join Timer' placeholder='abc123' onChange={onChangeTimerId} />
         </Grid>
         <Grid item>
-          <Button disabled={!isTimerIdValid()} type="submit" variant="contained" color="primary">Join</Button>
+          <Button disabled={!isTimerIdValid()} type='submit' variant='contained' color='primary'>Join</Button>
         </Grid>
       </Grid>
     </form>
@@ -44,6 +44,6 @@ JoinTimer.propTypes = {
 
 JoinTimer.defaultProps = {
   maxIdLength: 6
-};
+}
 
 export default JoinTimer
