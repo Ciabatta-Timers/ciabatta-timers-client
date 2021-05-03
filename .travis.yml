@@ -12,3 +12,10 @@ script:
 - npm run lint
 - npm test
 - npm run build
+
+deploy:
+  provider: script
+  script: bash scripts/deploy-to-prod.sh
+  skip_cleanup: true
+  on:
+    branch: main
